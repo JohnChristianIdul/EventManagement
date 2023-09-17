@@ -23,6 +23,7 @@ class Event(models.Model):
     DateofEvent = models.DateTimeField()
     MaxParticipants = models.IntegerField(null=False)
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    teachers = models.ManyToManyField(Teacher)
 
     def __str__(self):
         return self.EventTitle

@@ -9,7 +9,7 @@ class User(models.Model):
     first_name = models.CharField(max_length=20, null=False)
     middle_name = models.CharField(max_length=20, null=True, blank=True)
     last_name = models.CharField(max_length=20, null=False)
-    type = models.CharField(max_length=1, choices=Type)
+    type = models.CharField(max_length=1, choices=Type, default='S')
 
     class Meta:
         abstract = True
